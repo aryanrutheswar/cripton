@@ -1,0 +1,312 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --color-ivory: #FAFAF4;
+  --color-pastel: #B7E4A5;
+  --color-sage: #DCE8D5;
+  --color-olive: #89966A;
+  --color-deep-olive: #596B3D;
+  --color-forest: #344536;
+  --color-surface-glass: rgba(255, 255, 255, 0.68);
+}
+
+html {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  background-color: #FAFAF4;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAF4;
+  color: #344536;
+  overflow-x: clip;
+}
+
+/* Custom Botanical Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAF4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DCE8D5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #89966A;
+}
+
+/* Translucent Glass Panels */
+.glass-botanical {
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(220, 232, 213, 0.85);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #DCE8D5;
+  box-shadow: 0 4px 20px -2px rgba(52, 69, 54, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: #89966A;
+  box-shadow: 0 10px 28px -4px rgba(89, 107, 61, 0.1);
+}
+
+/* Translucent Glass Sphere effect */
+.glass-sphere {
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.85) 0%, rgba(183, 228, 165, 0.35) 45%, rgba(137, 150, 106, 0.2) 80%, rgba(89, 107, 61, 0.35) 100%);
+  box-shadow: inset -6px -6px 16px rgba(52, 69, 54, 0.12), inset 4px 4px 12px rgba(255, 255, 255, 0.9), 0 12px 28px -4px rgba(89, 107, 61, 0.15);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Atmospheric Botanical Gradients */
+.bg-botanical-mist {
+  background: radial-gradient(ellipse at 50% 0%, rgba(220, 232, 213, 0.5) 0%, rgba(250, 250, 244, 0.85) 60%, #FAFAF4 100%);
+}
+
+.bg-water-surface {
+  background: linear-gradient(180deg, rgba(220, 232, 213, 0.12) 0%, rgba(183, 228, 165, 0.18) 60%, rgba(220, 232, 213, 0.3) 100%);
+  border-top: 1px solid rgba(220, 232, 213, 0.5);
+}
+
+/* Prose Styling for Notes in Serene Botanical Theme */
+.prose-crypton {
+  color: #344536;
+  line-height: 1.8;
+}
+
+.prose-crypton h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #253327;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #DCE8D5;
+  padding-bottom: 0.5rem;
+}
+
+.prose-crypton h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #596B3D;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-crypton h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #475631;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-crypton p {
+  margin-bottom: 1rem;
+}
+
+.prose-crypton ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-crypton ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-crypton li {
+  margin-bottom: 0.35rem;
+}
+
+.prose-crypton blockquote {
+  border-left: 4px solid #89966A;
+  background: #EBF1E8;
+  padding: 0.75rem 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 1rem 0;
+  color: #344536;
+  font-style: italic;
+}
+
+.prose-crypton table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.9375rem;
+}
+
+.prose-crypton th {
+  background-color: #EBF1E8;
+  color: #344536;
+  text-align: left;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid #DCE8D5;
+  font-weight: 600;
+}
+
+.prose-crypton td {
+  padding: 0.625rem 0.875rem;
+  border: 1px solid #EBF1E8;
+  vertical-align: top;
+}
+
+.prose-crypton tr:nth-child(even) {
+  background-color: #F7F9F5;
+}
+
+.prose-crypton code {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #EBF1E8;
+  color: #475631;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  border: 1px solid #DCE8D5;
+}
+
+.prose-crypton pre {
+  background-color: #253327;
+  color: #FAFAF4;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+}
+
+.prose-crypton pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border: none;
+  font-size: 0.875rem;
+}
+
+/* Rock-Solid 3D Flip Card for Flashcards */
+.perspective-1000,
+.flashcard-perspective {
+  perspective: 1200px;
+  -webkit-perspective: 1200px;
+}
+
+.transform-style-3d,
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.flashcard-inner.is-flipped,
+.rotate-y-180 {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.backface-hidden,
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.flashcard-face-front {
+  transform: rotateY(0deg) translateZ(1px);
+  -webkit-transform: rotateY(0deg) translateZ(1px);
+  z-index: 2;
+}
+
+.flashcard-face-back {
+  transform: rotateY(180deg) translateZ(1px);
+  -webkit-transform: rotateY(180deg) translateZ(1px);
+  z-index: 1;
+}
+
+.flashcard-inner.is-flipped .flashcard-face-front {
+  z-index: 1;
+}
+
+.flashcard-inner.is-flipped .flashcard-face-back {
+  z-index: 2;
+}
+
+/* Print to PDF Styling */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .glass-card {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  .prose-crypton h1,
+  .prose-crypton h2,
+  .prose-crypton h3 {
+    page-break-after: avoid;
+  }
+
+  .prose-crypton table,
+  .prose-crypton pre {
+    page-break-inside: avoid;
+  }
+}

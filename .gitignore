@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+*/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+*.egg-info/
+
+# Local databases & uploads
+*.db
+*.sqlite
+*.sqlite3
+crypton.db
+backend/crypton.db
+backend/uploads/
+uploads/
+
+# Environment Variables & Secrets (NEVER COMMIT)
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.local
+frontend/.env
+frontend/.env.local
+
+# Build output
+dist/
+frontend/dist/
+build/
+*.tsbuildinfo
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
