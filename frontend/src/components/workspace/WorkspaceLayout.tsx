@@ -150,6 +150,14 @@ export const WorkspaceLayout: React.FC<WorkspaceLayoutProps> = ({ onBackToHome }
                 </span>
               </div>
             </div>
+
+            <button
+              onClick={() => setIsSettingsOpen(true)}
+              className="p-1.5 rounded-lg text-[#89966A] hover:text-[#344536] hover:bg-[#DCE8D5]/40 transition-colors cursor-pointer"
+              title="Settings"
+            >
+              <Settings className="w-4 h-4" />
+            </button>
           </div>
 
           {/* Nav Links */}
@@ -217,7 +225,7 @@ export const WorkspaceLayout: React.FC<WorkspaceLayoutProps> = ({ onBackToHome }
         </div>
 
         {/* Bottom Section */}
-        <div className="space-y-3 pt-4 border-t border-[#DCE8D5]">
+        <div className="space-y-2 pt-2">
           {/* Active document indicator */}
           {activeDocument && (
             <div className="p-2.5 rounded-xl bg-[#DCE8D5]/30 border border-[#DCE8D5] text-[11px] text-[#344536] flex items-center gap-2">
@@ -225,18 +233,6 @@ export const WorkspaceLayout: React.FC<WorkspaceLayoutProps> = ({ onBackToHome }
               <span className="truncate">{activeDocument.filename}</span>
             </div>
           )}
-
-          {/* Engine Status & Settings */}
-          <button
-            onClick={() => setIsSettingsOpen(true)}
-            className="w-full px-3 py-2 rounded-xl border border-[#DCE8D5] hover:border-[#89966A] bg-white/80 hover:bg-white text-xs text-[#344536] flex items-center justify-between transition-all cursor-pointer"
-          >
-            <div className="flex items-center gap-2">
-              <span className={`w-2 h-2 rounded-full ${hasApiKey ? 'bg-emerald-500' : 'bg-amber-400 animate-pulse'}`} />
-              <span className="font-medium">{hasApiKey ? 'Gemini Active' : 'Settings'}</span>
-            </div>
-            <Settings className="w-3.5 h-3.5 text-[#89966A]" />
-          </button>
 
           <button
             onClick={onBackToHome}
